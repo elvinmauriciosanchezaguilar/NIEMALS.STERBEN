@@ -3,43 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIEMALS STERBEN - ACADEMIA</title>
+    <title>NIEMALS STERBEN - LOGIN</title>
     <style>
-        body { background-color: #000; color: #E0E0A0; font-family: 'Georgia', serif; text-align: center; padding-top: 50px; }
-        .logo-container { margin-bottom: 20px; }
-        .logo-text { font-size: 2.5em; font-weight: bold; letter-spacing: 3px; color: #E0E0A0; }
-        .box { border: 1px solid #E0E0A0; padding: 40px; display: inline-block; border-radius: 5px; background: #0a0a0a; box-shadow: 0 0 20px rgba(224, 224, 160, 0.1); }
-        input { padding: 12px; width: 260px; border: 1px solid #E0E0A0; background: #000; color: #fff; margin-bottom: 15px; text-align: center; }
-        button { background-color: #E0E0A0; color: #000; padding: 12px 30px; border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; transition: 0.3s; }
-        button:hover { background-color: #fff; box-shadow: 0 0 15px #E0E0A0; }
-        #error { color: #ff4444; font-size: 0.9em; margin-top: 10px; display: none; }
+        body {
+            background-color: #000;
+            color: #d4af37; /* Dorado */
+            font-family: 'Times New Roman', serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .logo {
+            width: 250px;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            background: rgba(20, 20, 20, 0.9);
+            padding: 30px;
+            border: 2px solid #d4af37;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+        }
+        h2 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        select, input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: #1a1a1a;
+            border: 1px solid #d4af37;
+            color: #fff;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #d4af37;
+            color: #000;
+            border: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #fff;
+            box-shadow: 0 0 15px #fff;
+        }
+        .frase {
+            margin-top: 30px;
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+        #error { color: #ff4444; display: none; margin-bottom: 10px; }
     </style>
 </head>
 <body>
 
-    <div class="logo-container">
-        <div class="logo-text">NIEMALS STERBEN</div>
-        <p style="font-style: italic; letter-spacing: 2px;">Mente • Cuerpo • Técnica</p>
-    </div>
+    <div class="container">
+        <img src="NIEMALS STERBEN.png" alt="Logo" class="logo">
 
-    <div class="box">
-        <h3>ACCESO PRIVADO</h3>
-        <input type="password" id="pass" placeholder="Introduce tu clave"><br>
-        <button onclick="entrar()">ENTRAR AL DOJO</button>
-        <p id="error">Clave incorrecta. Contacta al Coach vía WhatsApp.</p>
+        <div class="input-group">
+            <h2>Por favor, digite sus credenciales</h2>
+            
+            <p id="error">Datos incorrectos. Verifica con tu Coach.</p>
+
+            <select id="programa">
+                <option value="" disabled selected>Programa...</option>
+                <option value="infantil">Infantil</option>
+                <option value="juvenil">Juvenil</option>
+                <option value="adultos">Adultos</option>
+                <option value="especial">Especial / Adaptado</option>
+            </select>
+
+            <input type="text" id="cuenta" placeholder="Número de cuenta (8 dígitos)" maxlength="8">
+            <input type="password" id="pass" placeholder="Contraseña">
+
+            <button onclick="validar()">INGRESAR</button>
+        </div>
+
+        <div class="frase">
+            "Nacer, crecer, triunfar...<br>¡NIEMALS STERBEN!"
+        </div>
     </div>
 
     <script>
-        function entrar() {
-            var input = document.getElementById("pass").value;
-            // Tu clave maestra
-            if (input === "NIEMALS2026") {
-                alert("¡Bienvenido al Dojo, Mauricio!");
+        function validar() {
+            var programa = document.getElementById("programa").value;
+            var cuenta = document.getElementById("cuenta").value;
+            var pass = document.getElementById("pass").value;
+
+            // Validación simple para probar (Clave maestra: NIEMALS2026)
+            if (cuenta.length === 8 && pass === "NIEMALS2026" && programa !== "") {
+                alert("Acceso concedido al programa " + programa);
                 window.location.href = "academia.html";
             } else {
                 document.getElementById("error").style.display = "block";
             }
         }
     </script>
+
 </body>
 </html>
