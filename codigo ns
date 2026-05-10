@@ -81,18 +81,18 @@
 <body>
 
     <div class="container">
-        <img src="NIEMALS STERBEN VERTICAL.png" alt="Niemals Sterben Logo" class="logo">
+        <img src="NIEMALS STERBEN.png" alt="Niemals Sterben Logo" class="logo">
 
         <div class="login-box">
             <h2>Por favor, digite sus credenciales</h2>
             
-            <p id="error">ACCESO DENEGADO. Verifica con servicio al cliente.</p>
+            <p id="error">ACCESO DENEGADO. Verifica con el Coach.</p>
 
-            <input type="text" id="cuenta" placeholder="Número de cuenta" maxlength="8">
+            <input type="text" id="cuenta" placeholder="Número de cuenta (8 dígitos)" maxlength="8">
             <input type="password" id="pass" placeholder="Contraseña">
 
             <select id="programa">
-                <option value="" disabled selected>Seleccione su programa...</option>
+                <option value="" disabled selected>Seleccione su Programa...</option>
                 <option value="infantil">Programa Infantil</option>
                 <option value="juvenil">Programa Juvenil</option>
                 <option value="adultos">Programa Adultos</option>
