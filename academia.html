@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIEMALS STERBEN - ACADEMIA</title>
+    <style>
+        body { background-color: #000; color: #d4af37; font-family: 'Times New Roman', serif; margin: 0; padding: 20px; text-align: center; }
+        .header { border-bottom: 1px solid #d4af37; padding-bottom: 20px; margin-bottom: 30px; }
+        .logo-mini { width: 120px; }
+        .welcome-msg { font-size: 1.4em; margin-top: 10px; font-weight: bold; text-transform: uppercase; }
+
+        /* Contenedor estilo UNITEC con los 7 módulos */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .module-card {
+            background: #0a0a0a;
+            border: 1px solid #d4af37;
+            padding: 25px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #d4af37;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .module-card:hover {
+            background: #d4af37;
+            color: #000;
+            transform: scale(1.03);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .module-icon { font-size: 2.5em; margin-bottom: 10px; }
+        .module-title { font-weight: bold; text-transform: uppercase; font-size: 0.95em; letter-spacing: 1px; }
+
+        .footer { margin-top: 40px; font-style: italic; font-size: 0.8em; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="NIEMALS STERBEN.png" alt="Logo" class="logo-mini">
+        <div class="welcome-msg">Portal del Atleta</div>
+    </div>
+
+    <div class="grid-container">
+        <a href="#" class="module-card">
+            <div class="module-icon">👤</div>
+            <div class="module-title">Perfil del Pelador</div>
+        </a>
+
+        <a href="recursos.html" class="module-card">
+            <div class="module-icon">📚</div>
+            <div class="module-title">Materiales y Recursos</div>
+        </a>
+
+        <a href="#" class="module-card">
+            <div class="module-icon">💻</div>
+            <div class="module-title">Gimnasio Virtual</div>
+        </a>
+
+        <a href="#" class="module-card">
+            <div class="module-icon">📢</div>
+            <div class="module-title">Anuncios</div>
+        </a>
+
+        <a href="#" class="module-card">
+            <div class="module-icon">💰</div>
+            <div class="module-title">Servicios Financieros</div>
+        </a>
+
+        <a href="#" class="module-card">
+            <div class="module-icon">🆘</div>
+            <div class="module-title">Asistencia al Atleta</div>
+        </a>
+
+        <a href="#" class="module-card">
+            <div class="module-icon">📜</div>
+            <div class="module-title">Reglamentos y Tratos</div>
+        </a>
+    </div>
+
+    <div class="footer">
+        "Nacer, crecer, triunfar... ¡NIEMALS STERBEN!"
+    </div>
+
+</body>
+</html>
